@@ -11,8 +11,8 @@ RUN mvn archetype:generate \
   -DartifactId=myproject
 RUN rm -rf /root/myproject/src/test/java/examples
 ADD features /root/myproject/src/test/java/features
-RUN cat > /root/myproject/src/test/java/features/Features.java << EOF
-package features;
+RUN cat > /root/myproject/src/test/java/features/Features.java << EOF \
+package features; 
 import com.intuit.karate.Results;
 import com.intuit.karate.Runner;
 import static org.junit.jupiter.api.Assertions.*;
