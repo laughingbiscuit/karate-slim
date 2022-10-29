@@ -8,10 +8,10 @@ Feature: call an API
 
   Scenario: Store a variable between two scenarios
     Given url 'https://httpbin.org/get'
-    And header Access-token = 'abcdef'
+    And header Access-Token = 'abcdef'
     When method get
     Then status 200
-    And def token = $.headers.Access-token
+    And def token = $.headers.Access-Token
     And print token
     Given url 'https://httpbin.org/get'
     And def authHeader = 'Bearer ' + token
