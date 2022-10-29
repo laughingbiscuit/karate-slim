@@ -1,1 +1,1 @@
-chrome & mvn test 
+google-chrome & mvn test 
