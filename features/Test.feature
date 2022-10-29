@@ -8,7 +8,7 @@ Feature: call an API
 
   Scenario: Store a variable between two scenarios
     Given url 'https://httpbin.org/get'
-    And header Access-token = abcdef
+    And header Access-token = 'abcdef'
     When method get
     Then status 200
     And def token = response.headers.Access-token
