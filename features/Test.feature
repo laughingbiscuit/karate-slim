@@ -16,7 +16,8 @@ Feature: call an API
 
   Scenario: Successfully call API
     Given url 'https://httpbin.org/get'
-    And header Authorization = 'Bearer ' + token
+    And def authHeader = 'Bearer ' + token
+    And header Authorization = authHeader
     When method get
     Then status 200
 
