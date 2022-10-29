@@ -1,7 +1,5 @@
-FROM alpine:latest
+FROM ptrthomas/karate-chrome
 
-RUN apk update
-RUN apk add openjdk12-jdk maven docker chromium-browser
 WORKDIR /root
 RUN mvn archetype:generate \
   -DarchetypeGroupId=com.intuit.karate \
