@@ -16,4 +16,4 @@ ADD ./helpers/.FeaturesTest.java /root/myproject/src/test/java/features/Features
 
 WORKDIR /root/myproject
 
-CMD ["mvn", "test"]
+CMD ["sh", "entry.sh"]
