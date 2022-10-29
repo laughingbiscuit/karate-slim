@@ -10,6 +10,7 @@ jobs:
     - name: Run it
       run: sh run.sh
     - name: upload result
+      if: always()
       uses: actions/upload-artifact@v3
       with:
         name: results
