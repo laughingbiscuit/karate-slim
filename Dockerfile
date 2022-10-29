@@ -9,7 +9,7 @@ RUN mvn archetype:generate \
   -DartifactId=myproject
 RUN rm -rf /root/myproject/src/test/java/examples
 ADD features /root/myproject/src/test/java/features
-ADD ./helpers/.FeaturesTest.java /root/myproject/src/test/java/features
+ADD ./helpers/.FeaturesTest.java /root/myproject/src/test/java/features/FeaturesTest.java
 
 WORKDIR /root/myproject
 
