@@ -11,7 +11,7 @@ Feature: call an API
     And header Access-token = 'abcdef'
     When method get
     Then status 200
-    And def token = response.headers.Access-token
+    And def token = $.headers.Access-token
     And print token
     Given url 'https://httpbin.org/get'
     And def authHeader = 'Bearer ' + token
