@@ -13,8 +13,6 @@ Feature: call an API
     Then status 200
     And def token = response.headers.Access-token
     And print token
-
-  Scenario: Successfully call API
     Given url 'https://httpbin.org/get'
     And def authHeader = 'Bearer ' + token
     And header Authorization = authHeader
