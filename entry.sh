@@ -1,1 +1,2 @@
-google-chrome & mvn test -B
+google-chrome & 
+sleep 5 && mvn test -B
