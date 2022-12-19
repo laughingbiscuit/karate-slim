@@ -1,9 +1,7 @@
 #!/bin/sh
 set -e
 
-docker build -t karate-chrome .
-docker run --name karate --rm --cap-add=SYS_ADMIN -v "$PWD":/karate -v "$HOME"/.m2:/root/.m2 karate-chrome &
+docker run --name karate --rm -p 5900:5900 --cap-add=SYS_ADMIN -v "$PWD":/src ptrthomas/karate-chrome
 sleep 5
-docker exec karate mvn test -B -ntp
+docker exec -it -w /src karate mvn clean test -DargLine='-Dkarate.env=docker' 
 docker stop karate
-wait
