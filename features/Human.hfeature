@@ -2,8 +2,8 @@ Feature: As a human I want to write in english so that my amigos understand
 
   Scenario: Successful example
     Given I navigate to http://httpbin.org/forms/post
+    Then the page says Pizza
     And I type Sean into custname
     When I click {}Submit order
     And I wait
-    Then the page says Sean
     And I go back
