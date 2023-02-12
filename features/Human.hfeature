@@ -1,0 +1,9 @@
+Feature: As a human I want to write in english so that my amigos understand
+
+  Scenario: Successful example
+    Given I navigate to https://www.w3schools.com/html/tryit.asp?filename=tryhtml_form_submit
+    And I type Sean into fname
+    When I click {input}Submit
+    And I wait
+    Then the page says The server has processed your input
+    And I go back
