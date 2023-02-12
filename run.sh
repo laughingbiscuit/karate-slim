@@ -4,7 +4,7 @@ set -e
 # preprocess - humanify all
 
 (cd features && for FILE in *.hfeature; do
-  sh ../humanify.sh > $(echo $FILE | sed 's/hfeature/feature')
+  sh ../humanify.sh > $(echo $FILE | sed 's/hfeature/feature/')
 done)
 
 # run tests
