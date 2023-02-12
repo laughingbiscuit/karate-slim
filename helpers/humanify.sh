@@ -2,7 +2,7 @@
 set -e
 
 sed "
-s|I navigate to \(.*\)|url('\1')|
+s|I navigate to \(.*\)|driver '\1'|
 s|I wait|delay(2000)|
 s|I go back|back()|
 s|I click \(.*\)|click('\1')|
