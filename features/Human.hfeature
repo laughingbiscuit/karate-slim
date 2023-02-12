@@ -1,9 +1,9 @@
 Feature: As a human I want to write in english so that my amigos understand
 
   Scenario: Successful example
-    Given I navigate to https://www.w3schools.com/html/tryit.asp?filename=tryhtml_form_submit
-    And I type Sean into fname
-    When I click {input}Submit
+    Given I navigate to http://httpbin.org/forms/post
+    And I type Sean into custname
+    When I click {button}Submit order
     And I wait
-    Then the page says The server has processed your input
+    Then the page says Sean
     And I go back
