@@ -3,10 +3,14 @@ set -ex
 
 # preprocess - humanify all
 
-(cd features && for FILE in *.hfeature; do
-  sh ../helpers/humanify.sh $FILE > $(echo $FILE | sed 's/hfeature/feature/')
-  cat $(echo $FILE | sed 's/hfeature$/feature/')
-done)
+#(cd features && for FILE in *.hfeature; do
+  #sh ../helpers/humanify.sh $FILE > $(echo $FILE | sed 's/hfeature/feature/')
+  #cat $(echo $FILE | sed 's/hfeature$/feature/')
+#done)
+
+rm -f reverse.js.snip
+node ./helpers/humanify.js
+
 # run tests
 docker build -t karate-slim .
 docker run -d --name karate --rm -p 5900:5900 --cap-add=SYS_ADMIN -v $(pwd)/results:/karate/target karate-slim
